@@ -1,0 +1,144 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "artist": "Whittaker",
+      "song": "When Dove cries",
+      "genre": "House",
+      "image": "https://i.ytimg.com/vi/YrityikQE4A/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCMda4NEe3LKptRtcfRWm15FAd0wg/",
+      "title": "Take a bow",
+      "duration": "6mins"
+    },
+    {
+      "id": 2,
+      "artist": "Beyonce",
+      "song": "Billie Jean",
+      "genre": "Pop",
+      "image": "https://i.ytimg.com/vi/-tb8gRoP7oA/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGH8gVCgnMA8=&rs=AOn4CLALASpK2knyczsBlLfJA355u-AvoQ",
+      "title": "Irreplacable",
+      "duration": "8mins"
+    },
+    {
+      "id": 3,
+      "artist": "Boone",
+      "song": "Take a bow",
+      "genre": "Pop rock",
+      "image": "https://i.ytimg.com/vi/HU08BcK5SUY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDrclqNG7l0cd1MgtGhBqCLYggWgA",
+      "title": "Beautiful Things",
+      "duration": "4mins"
+    },
+    {
+      "id": 4,
+      "artist": "Bien",
+      "song": "",
+      "genre": "House",
+      "image": "https://i.ytimg.com/vi/eaYqWNF1noM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDcNp2TidRewBDr8Nr_M2XbbiENiQ",
+      "title": "Chikwere",
+      "duration": "4mins"
+    },
+    {
+      "id": 5,
+      "artist": "Boone",
+      "song": "Just Dance",
+      "genre": "House",
+      "image": "https://i.ytimg.com/vi/kL5LDY_hIVc/maxresdefault.jpg",
+      "title": "Billie Jean",
+      "duration": "4mins"
+    },
+    {
+      "id": 6,
+      "artist": "Krissie",
+      "song": "Irreplacable",
+      "genre": "Hip-hop",
+      "image": "data:image/jpeg;base64,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",
+      "title": "Take a bow",
+      "duration": "5mins"
+    },
+    {
+      "id": 7,
+      "artist": "Gipsy",
+      "song": "Just Dance",
+      "genre": "Hip-hop",
+      "image": "https://blog.udemy.com/wp-content/uploads/2020/11/2HoneSkills-620x414.jpg",
+      "title": "When Dove cries",
+      "duration": "7mins"
+    },
+    {
+      "id": 8,
+      "artist": "Duky",
+      "song": "Irreplacable",
+      "genre": "Hip-hop",
+      "image": "https://cdn-images.dzcdn.net/images/cover/c6adc5a6eed5dfbefb35a6342b49db08/1900x1900-000000-80-0-0.jpg",
+      "title": "Just Dance",
+      "duration": "4mins"
+    },
+    {
+      "id": 9,
+      "artist": "Bensoul",
+      "song": "Thick Thighs",
+      "genre": "R&B",
+      "image": "https://i.ytimg.com/vi/w4zuEKS6rN8/maxresdefault.jpg",
+      "title": "Thick Thighs",
+      "duration": "7mins"
+    },
+    {
+      "id": 10,
+      "artist": "Bien",
+      "song": "",
+      "genre": "House",
+      "image": "https://i.ytimg.com/vi/eaYqWNF1noM/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDcNp2TidRewBDr8Nr_M2XbbiENiQ",
+      "title": "Chikwere",
+      "duration": "4mins"
+    },
+    {
+      "id": 11,
+      "artist": "Kuruga",
+      "song": "Irreplacable",
+      "genre": "Mugithi",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBDqs4fAnVqn97otx9RDUWdkCBcFaPL2oUQw&s",
+      "title": "Maisha no maya",
+      "duration": "5mins"
+    },
+    {
+      "id": 12,
+      "artist": "Benedicto",
+      "song": "Thousand years",
+        "image": "https://blog.udemy.com/wp-content/uploads/2020/11/2HoneSkills-620x414.jpg",
+      "title": "Just Dance",
+      "duration": "4mins"
+    }
+  ],
+  "favorites": [
+    {
+      "id": 2,
+      "title": "When Dove cries",
+      "artist": "Whittaker",
+      "genre": "Country",
+      "duration": "4mins",
+        "image": "https://blog.udemy.com/wp-content/uploads/2020/11/2HoneSkills-620x414.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Irreplacable",
+      "artist": "Beyonce",
+      "genre": "Pop",
+      "duration": "4mins",
+       "image": "https://blog.udemy.com/wp-content/uploads/2020/11/2HoneSkills-620x414.jpg"
+    },
+    {"id": 4,
+      "title": "Irreplacable",
+      "artist": "Beyonce",
+      "genre": "Pop",
+      "duration": "4mins",
+      "image": "https://blog.udemy.com/wp-content/uploads/2020/11/2HoneSkills-620x414.jpg"
+  },
+  {
+      "id": 3,
+      "title": "Just Dance",
+      "artist": "Selestina",
+      "genre": "House",
+      "duration": "5mins",
+      "image": "https://blog.udemy.com/wp-content/uploads/2020/11/2HoneSkills-620x414.jpg"
+    }
+  ]
+}
