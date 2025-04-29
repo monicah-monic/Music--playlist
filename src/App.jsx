@@ -2,10 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import FavoritesPage from './components/FavoritesPage';
-import SignInPage from './components/SignIn';
-import SignUpPage from './components/SignUp';
 import Navbar from './components/Navbar';
 import Swal from 'sweetalert2';
+import Login from './components/LogIn';
 
 function App() {
   const [favorites, setFavorites] = useState([]);
@@ -20,7 +19,7 @@ function App() {
     const signedUp = localStorage.getItem('isSignedUp') === 'true';
 
     if (!signedUp) {
-      Swal.fire('Please sign up first!');
+      Swal.fire('Please log in to add to favorites!');
       return;
     }
 
@@ -35,29 +34,11 @@ function App() {
 
   return (
     <Router>
-      <Navbar 
-        favorites={favorites}
-        isSignedUp={isSignedUp}
-        setIsSignedUp={setIsSignedUp}
-      />
+      <Navbar  favorites={favorites} isSignedUp={isSignedUp} setIsSignedUp={setIsSignedUp}/>
       <main className="p-6">
         <Routes>
-          <Route 
-            path="/" 
-            element={<HomePage 
-              addToFavorites={addToFavorites} 
-              favorites={favorites} 
-            />} 
-          />
-          <Route 
-            path="/favorites" 
-            element={<FavoritesPage 
-              favorites={favorites} 
-              removeFromFavorites={removeFromFavorites} 
-            />} 
-          />
-          <Route path="/signup" element={<SignUpPage />} />
-          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/" element={<HomePage addToFavorites={addToFavorites} favorites={favorites} />} />
+          <Route path="/login" element={<Login setIsSignedUp={setIsSignedUp} />} />
         </Routes>
       </main>
     </Router>

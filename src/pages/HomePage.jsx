@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import SongCard from '../components/SongCard';
@@ -20,16 +19,12 @@ function HomePage({ addToFavorites, favorites }) {
   const handleAddOrUpdateSong = () => {
     if (newSong.title && newSong.artist && newSong.genre && newSong.image) {
       if (isEditing) {
-        setSongs((prevSongs) =>
-          prevSongs.map((song) =>
-            song.id === editSongId ? { ...song, ...newSong } : song
-          )
+        setSongs((prevSongs) =>prevSongs.map((song) =>song.id === editSongId ? { ...song, ...newSong } : song
+       )
         );
         setIsEditing(false);
       } else {
-        setSongs((prevSongs) => [
-          ...prevSongs,
-          { ...newSong, id: Date.now() },
+        setSongs((prevSongs) => [...prevSongs,{ ...newSong, id: Date.now() },
         ]);
       }
       setNewSong({ title: '', artist: '', genre: '', image: '' });
@@ -71,62 +66,34 @@ function HomePage({ addToFavorites, favorites }) {
     });
   };
 
-  const filteredSongs = songs.filter((song) =>
-    song.artist.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredSongs = songs.filter((song) =>song.artist.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <div className="p-4">
       <h2 className="text-3xl font-bold mb-4">All Songs</h2>
 
-      {/* Search Bar */}
+      
       <div className="flex items-center border border-gray-300 rounded mb-4 p-2">
-        <input
-          type="text"
-          placeholder="Search by artist..."
-          className="flex-grow p-2 outline-none"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <input type="text" placeholder="Search by artist..."className="flex-grow p-2 outline-none" value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}/>
       </div>
 
-      {/* Add/Edit Song Form */}
+     
       <div className="mb-6">
         <h3 className="text-xl font-semibold mb-2">
           {isEditing ? 'Edit Song' : 'Add New Song'}
         </h3>
-        <input
-          type="text"
-          placeholder="Title"
-          className="p-2 border border-gray-300 rounded w-full mb-2"
-          value={newSong.title}
-          onChange={(e) => setNewSong({ ...newSong, title: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Artist"
-          className="p-2 border border-gray-300 rounded w-full mb-2"
-          value={newSong.artist}
-          onChange={(e) => setNewSong({ ...newSong, artist: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Genre"
-          className="p-2 border border-gray-300 rounded w-full mb-2"
-          value={newSong.genre}
-          onChange={(e) => setNewSong({ ...newSong, genre: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Image URL"
-          className="p-2 border border-gray-300 rounded w-full mb-2"
-          value={newSong.image}
-          onChange={(e) => setNewSong({ ...newSong, image: e.target.value })}
-        />
+        <input type="text" placeholder="Title" className="p-2 border border-gray-300 rounded w-full mb-2" value={newSong.title}
+          onChange={(e) => setNewSong({ ...newSong, title: e.target.value })} />
+        <input type="text" placeholder="Artist"className="p-2 border border-gray-300 rounded w-full mb-2" value={newSong.artist}
+          onChange={(e) => setNewSong({ ...newSong, artist: e.target.value })} />
+        <input type="text" placeholder="Genre"className="p-2 border border-gray-300 rounded w-full mb-2"value={newSong.genre}
+          onChange={(e) => setNewSong({ ...newSong, genre: e.target.value })} />
+        <input type="text" placeholder="Image URL" className="p-2 border border-gray-300 rounded w-full mb-2"value={newSong.image}
+          onChange={(e) => setNewSong({ ...newSong, image: e.target.value })}/>
         <button
-          onClick={handleAddOrUpdateSong}
-          className="bg-rose-950 text-white px-4 py-2 rounded"
-        >
+          onClick={handleAddOrUpdateSong} className="bg-rose-950 text-white px-4 py-2 rounded" >
           {isEditing ? 'Update Song' : 'Add Song'}
         </button>
       </div>
@@ -134,20 +101,14 @@ function HomePage({ addToFavorites, favorites }) {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {filteredSongs.map((song) => (
-          <SongCard
-            key={song.id}
-            song={song}
-            onSongAction={addToFavorites}
-            actionLabel={
-              favorites.find((fav) => fav.id === song.id)
+          <SongCard key={song.id} song={song} onSongAction={addToFavorites} actionLabel={ favorites.find((fav) => fav.id === song.id)
                 ? "In Favorites"
                 : "Add to Favorites"
             }
             isInFavorites={favorites.find((fav) => fav.id === song.id)}
             onEdit={() => handleEditSong(song)}
             onDelete={() => handleDeleteSong(song.id)}
-            isFavoritesPage={false}
-          />
+            isFavoritesPage={false}/>
         ))}
         {filteredSongs.length === 0 && (
           <p className="text-center text-red-500">No artists found.</p>
